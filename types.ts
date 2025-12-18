@@ -1,14 +1,25 @@
 
+export interface BookResult {
+  id: string;
+  title: string;
+  author: string;
+  category: string;
+  script: string;
+  timestamp: number;
+}
+
+export type Language = 'ru' | 'kz';
+
+export interface AppState {
+  loading: boolean;
+  results: BookResult[];
+  error: string | null;
+}
+
 export interface EventConfig {
-  guestName: string;
+  message: string;
   date: string;
   time: string;
   location: string;
   address2GIS: string;
-  message: string;
-}
-
-export enum AppState {
-  WELCOME = 'welcome',
-  INVITATION = 'invitation'
 }
