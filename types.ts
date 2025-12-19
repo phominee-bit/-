@@ -16,10 +16,14 @@ export interface AppState {
   error: string | null;
 }
 
+/**
+ * Interface for event invitation configuration used in InvitationPage component.
+ * Fixed error: Module '"../types"' has no exported member 'EventConfig'.
+ */
 export interface EventConfig {
   message: string;
   date: string;
   time: string;
   location: string;
-  address2GIS: string;
+  address2GIS?: string;
 }
